@@ -28,15 +28,15 @@ const ViewPaste = () => {
     
   return (
     <div>
-            <div className='flex flex-row  gap-7 place-content-between p-2'>
-                <input className='p-2 pl-4 rounded-xl mt-4 w-[35vw]'
+            <div className='flex flex-row place-content-between p-2 px-[15vw]'>
+                <input className='p-2 pl-4 rounded-xl mt-4 w-[45vw]'
                     type="text"
                     placeholder='Enter title'
                     value={paste.title}
                     // onChange={handletitle}
                     disabled
                 />
-                {/* <button className='p-2 rounded-xl mt-4'
+                {/* <button className='p-3 rounded-xl mt-4 bg-[#4B5492] w-[10vw] text-white'
                     onClick={createPaste}
                 >
                     {
@@ -45,18 +45,25 @@ const ViewPaste = () => {
                 </button> */}
 
             </div>
-            <div>
+            <div className='bg-[#333333] w-[80vw] ml-[8vw] mt-5'>
+                <div className='w-full rounded-t flex items-center justify-start gap-x-4 px-4 py-2'>
+                    <div class="w-[13px] h-[13px] rounded-full flex items-center justify-center p-[1px] overflow-hidden bg-[rgb(255,95,87)]"></div>
+                    <div class="w-[13px] h-[13px] rounded-full flex items-center justify-center p-[1px] overflow-hidden bg-[rgb(254,188,46)]"></div>
+                    <div class="w-[13px] h-[13px] rounded-full flex items-center justify-center p-[1px] overflow-hidden bg-[rgb(45,200,66)]"></div>
+                </div>
                 <textarea
                     value={paste.value}
                     onChange={(e) => setValue(e.target.value)}
-                    className='p-4 rounded-xl mt-4 min-w-[50vw]'
+                    className='p-4 rounded-xl  w-[99.5%] bg-[#0F0F0F]'
                     placeholder='Enter paste'
-                    rows={15}
+                    rows={14}
                     disabled
+
                 ></textarea>
 
             </div>
         </div>
+
   )
 }
 

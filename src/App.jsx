@@ -11,7 +11,7 @@ const router = createBrowserRouter(
     {
       path: '/',
       element:
-      <div>
+      <div className='w-[95vw]'>
         <Navbar />
         <Home />
       </div>
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
     {
       path: '/pastes',
       element: 
-      <div>
+      <div className='w-[95vw]'>
         <Navbar />
         <Pastes />
       </div>
@@ -27,7 +27,7 @@ const router = createBrowserRouter(
     {
       path: '/pastes/:id',
       element: 
-      <div>
+      <div className='w-[95vw]'>
         <Navbar />
         <ViewPaste />
       </div>
