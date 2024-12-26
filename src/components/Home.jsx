@@ -49,7 +49,7 @@ const Home = () => {
 
     return (
 
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-8">
+        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-8 w-[100vw]">
             <div className="flex flex-col md:flex-row justify-between items-center w-11/12 max-w-4xl gap-6">
                 <input
                     className="p-4 rounded-lg w-full md:w-2/3 bg-gray-700 text-white placeholder-gray-400 shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500"

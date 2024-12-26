@@ -5,7 +5,7 @@ import logo from '../assets/paste_logo.png';
 const Navbar = () => {
   
   return (
-    <div className="bg-[#121928] text-white py-4 shadow-lg">
+    <div className="bg-[#121928] text-white py-4 shadow-lg w-[100vw]">
       <div className="flex flex-row justify-between items-center px-[15vw]">
         <div className="flex flex-row items-center gap-8">
           <img src={logo} alt="logo" className="w-12 h-12" />
