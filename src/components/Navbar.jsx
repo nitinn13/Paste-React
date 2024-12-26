@@ -5,16 +5,26 @@ import logo from '../assets/paste_logo.png';
 const Navbar = () => {
   
   return (
-    <div className='flex flex-row justify-between items-center  mt-[-10px] shadow-lg'>
-      <div className='flex flex-row gap-[7vw] items-center mr-6'>
-      <img src={logo} alt="logo" className='w-[80px] h-[80px]' />
-      <NavLink to="/">Home</NavLink>
+    <div className="bg-[#121928] text-white py-4 shadow-lg">
+      <div className="flex flex-row justify-between items-center px-[15vw]">
+        <div className="flex flex-row items-center gap-8">
+          <img src={logo} alt="logo" className="w-12 h-12" />
+          <NavLink 
+            to="/" 
+            className="text-gray-300 hover:text-purple-500 font-medium text-lg transition duration-300"
+          >
+            Home
+          </NavLink>
+        </div>
+        <div>
+          <NavLink 
+            to="/pastes" 
+            className="text-gray-300 hover:text-purple-500 font-medium text-lg transition duration-300"
+          >
+            My Pastes
+          </NavLink>
+        </div>
       </div>
-      <div className='mr-[7vw]'>
-      <NavLink to="/pastes">My Pastes</NavLink>
-      </div>
-        
-
     </div>
   )
 }

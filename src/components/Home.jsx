@@ -49,41 +49,35 @@ const Home = () => {
 
     return (
 
-        <div>
-            <div className='flex flex-row place-content-between p-2 px-[15vw]'>
-                <input className='p-2 pl-4 rounded-xl mt-4 w-[45vw]'
+        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-8">
+            <div className="flex flex-col md:flex-row justify-between items-center w-11/12 max-w-4xl gap-6">
+                <input
+                    className="p-4 rounded-lg w-full md:w-2/3 bg-gray-700 text-white placeholder-gray-400 shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                     type="text"
-                    placeholder='Enter title'
+                    placeholder="Enter a descriptive title"
                     value={title}
                     onChange={handletitle}
                 />
-                <button className='p-3 rounded-xl mt-4 bg-[#4B5492] w-[10vw] text-white'
+                <button
+                    className="p-3 w-full md:w-1/4 rounded-lg bg-purple-600 hover:bg-purple-700 shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white font-semibold"
                     onClick={createPaste}
                 >
-                    {
-                        pasteId ? "Update Paste" : "Create Paste"
-                    }
+                    {pasteId ? 'Update Paste' : 'Create Paste'}
                 </button>
-
             </div>
-            <div className='bg-[#333333] w-[80vw] ml-[8vw] mt-5'>
-                <div className='w-full rounded-t flex items-center justify-start gap-x-4 px-4 py-2'>
-                    <div class="w-[13px] h-[13px] rounded-full flex items-center justify-center p-[1px] overflow-hidden bg-[rgb(255,95,87)]"></div>
-                    <div class="w-[13px] h-[13px] rounded-full flex items-center justify-center p-[1px] overflow-hidden bg-[rgb(254,188,46)]"></div>
-                    <div class="w-[13px] h-[13px] rounded-full flex items-center justify-center p-[1px] overflow-hidden bg-[rgb(45,200,66)]"></div>
+            <div className="w-11/12 max-w-4xl mt-8 bg-gray-700 rounded-lg shadow-xl overflow-hidden">
+                <div className="flex items-center gap-3 px-4 py-2 bg-gray-800 border-b border-gray-600">
+                    <div className="w-4 h-4 rounded-full bg-red-500"></div>
+                    <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+                    <div className="w-4 h-4 rounded-full bg-green-500"></div>
                 </div>
                 <textarea
                     value={value}
-                    onChange={(e) => {
-                        setValue(e.target.value)
-                        
-                    }}
-                    className='p-4 rounded-xl  w-[99.5%] bg-[#0F0F0F]'
-                    placeholder='Enter paste'
+                    onChange={(e) => setValue(e.target.value)}
+                    className="w-full p-4 bg-gray-900 text-white placeholder-gray-400 rounded-b-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    placeholder="Write your paste content here..."
                     rows={14}
-
                 ></textarea>
-                
             </div>
         </div>
 
